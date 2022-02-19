@@ -18,10 +18,29 @@ class Snake:
 
 
     def Up(self):
+        print('up')
         if self.SnakeList[0].heading() == 270:
             return
         else:
-            self.SnakeList[0].heading
+            self.SnakeList[0].heading = 90
+    def Down(self):
+        print("Down")
+        if self.SnakeList[0].heading() == 90:
+            return
+        else:
+            self.SnakeList[0].heading = 270
+    def Right(self):
+        print("right")
+        if self.SnakeList[0].heading() == 180:
+            return
+        else:
+            self.SnakeList[0].heading = 0
+    def Left(self):
+        print("left")
+        if self.SnakeList[0].heading() == 0:
+            return
+        else:
+            self.SnakeList[0].heading = 180
     def snakeForward(self,SnakeList,times=8):
 
         for seg in range(len(self.SnakeList)-1,0,-1):#start,stop and step
