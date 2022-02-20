@@ -35,7 +35,7 @@ while Cont:
         Score_keep.score(score)
         Snake.extend()
     try:
-        if (Snake.X>290.0 and Snake.heading()==0.0) or (Snake.X < -290.0 and Snake.heading() == 180.0) or  (Snake.Y < -290.0 and Snake.heading() == 270.0) or (Snake.Y > 290.0 and Snake.heading() == 90.0):
+        if (Snake.X>290.0 and Snake.heading()==0.0) or (Snake.X < -290.0 and Snake.heading() == 180.0) or  (Snake.Y < -280.0 and Snake.heading() == 270.0) or (Snake.Y > 280.0 and Snake.heading() == 90.0):
             pass
     except:
         Score_keep.GameOver(Cont)
@@ -55,4 +55,3 @@ screen.exitonclick()
 
 
 
-screen.exitonclick()

@@ -13,15 +13,17 @@ class Snake:
             self.T.penup()
             self.T.width(2)
             self.T.goto(0 - (20 * i), 0)
-            self.T.shapesize(stretch_len=1.1,stretch_wid=1)
+            self.T.shapesize(stretch_len=.85,stretch_wid=.85)
             self.T.color('white')
             self.T.shape('square')
             self.SnakeList.append(self.T)
+        self.SnakeList[0].shape('classic')
+        self.SnakeList[0].shapesize(stretch_len=1.5,stretch_wid=1.5)
     def add_seg(self,pos):
         self.T = Turtle()
         self.T.penup()
         self.T.goto(pos)
-        self.T.shapesize(stretch_len=1.1, stretch_wid=1)
+        self.T.shapesize(stretch_len=.85, stretch_wid=.85)
         self.T.color('white')
         self.T.shape('square')
         self.SnakeList.append(self.T)
@@ -61,7 +63,9 @@ class Snake:
         for seg in range(len(self.SnakeList)-1,0,-1):#start,stop and step
                         self.newX = self.SnakeList[seg-1].xcor()
                         self.newY = self.SnakeList[seg-1].ycor()
+
                         self.SnakeList[seg].goto(self.newX,self.newY)
+
         self.SnakeList[0].forward(20)
         self.X = self.SnakeList[0].xcor()
         self.Y = self.SnakeList[0].ycor()
