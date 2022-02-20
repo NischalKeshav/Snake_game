@@ -11,6 +11,7 @@ class Snake:
         for i in range(4):
             self.T = Turtle()
             self.T.penup()
+            self.T.width(2)
             self.T.goto(0 - (20 * i), 0)
             self.T.shapesize(stretch_len=1.1,stretch_wid=1)
             self.T.color('white')
