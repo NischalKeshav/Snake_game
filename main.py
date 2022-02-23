@@ -49,13 +49,16 @@ while Cont:
         
           
     except:
-        Score_keep.GameOver(Cont)
-        Cont = False
+        #Score_keep.GameOver(Cont)
+        #Cont = False
+        Snake.new_match()
     Head = Snake.SnakeList[0]
     for x in Snake.SnakeList[1:]:
         if Head.distance(x)<10:
-            Score_keep.GameOver(Cont)
-            Cont = False
+            # Score_keep.GameOver(Cont)
+            # Cont = False
+            Snake.new_match
+
 
 screen.exitonclick()
 

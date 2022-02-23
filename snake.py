@@ -17,6 +17,7 @@ class Snake:
             self.T.color('white')
             self.T.shape('square')
             self.SnakeList.append(self.T)
+        self.SnakeList[0].setheading(0)    
         self.SnakeList[0].shape('classic')
         self.SnakeList[0].shapesize(stretch_len=1.5,stretch_wid=1.5)
     def add_seg(self,pos):
@@ -29,11 +30,12 @@ class Snake:
         self.SnakeList.append(self.T)
     def extend(self):
         self.add_seg(self.SnakeList[-1].position())
+      
 
 
-
-
-
+    def new_match(self):
+      self.SnakeList.clear()
+      self.start()
     def Up(self):
         print('up')
         if self.SnakeList[0].heading() == 270:

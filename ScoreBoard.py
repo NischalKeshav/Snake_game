@@ -7,10 +7,18 @@ class Scoreboard(Turtle):
         self.hideturtle()
         self.goto(-100,270)
         self.color('White')
+        self.highscore=0
     def score(self,score):
         self.clear()
-        self.write(f"Score:{score}",font=('Arial',18,'normal'))
+        self.scored = score
+        if score > self.highscore:
+          self.highscore = score
+        self.write(f"Score:{score}    High Score:{self.highscore}",font=('Arial',18,'normal'))
     # def GameOver(self,Cont):
     #     self.goto(-50, 60)
     #     self.write("GAME OVER", font=('Arial', 32, 'normal'))
     #     Cont = False
+    def reset(self):
+      if self.score > self.highscore:
+          self.highscore = self.score
+          self.score = 0
