@@ -10,7 +10,7 @@ class Scoreboard(Turtle):
     def score(self,score):
         self.clear()
         self.write(f"Score:{score}",font=('Arial',18,'normal'))
-    def GameOver(self,Cont):
-        self.goto(-50, 60)
-        self.write("GAME OVER", font=('Arial', 32, 'normal'))
-        Cont = False
+    # def GameOver(self,Cont):
+    #     self.goto(-50, 60)
+    #     self.write("GAME OVER", font=('Arial', 32, 'normal'))
+    #     Cont = False
