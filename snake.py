@@ -34,6 +34,8 @@ class Snake:
 
 
     def new_match(self):
+      for i in self.SnakeList:
+        i.goto (1000,1000)
       self.SnakeList.clear()
       self.start()
     def Up(self):
